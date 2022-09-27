@@ -31,7 +31,7 @@ const postGear = (request, response) => {
   const { name, type, quality, description, price, date_added, available } =
     request.body;
   pool.query(
-    "INSERT INTO gear (name, type, quality, description, price, date_added, available) VALUES ($1, $2, $3, $4, $5, $6, $7",
+    "INSERT INTO gear (name, type, quality, description, price, date_added, available) VALUES ($1, $2, $3, $4, $5, $6, $7)",
     [name, type, quality, description, price, date_added, available],
     (error, results) => {
       if (error) throw error;
