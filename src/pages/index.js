@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Header from "../components/Header/Header";
+import Nav from "../components/Nav/Nav";
+import Filter from "../components/Filter/Filter";
+import Gear from "../components/Gear/Gear";
 
 const IndexPage = () => {
   const [allGear, setAllGear] = useState([]);
@@ -22,7 +26,15 @@ const IndexPage = () => {
     getAllGear();
   }, []);
 
-  return <main>0th index of allGear: {allGear[0].name}</main>;
+  return (
+    <main>
+      <Header />
+      <Nav />
+      <Filter />
+      <Gear />
+      0th index of allGear: {allGear[0].name}
+    </main>
+  );
 };
 
 export default IndexPage;
