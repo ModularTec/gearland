@@ -31,8 +31,7 @@ const IndexPage = () => {
       <Header />
       <Nav />
       <Filter />
-      <Gear />
-      0th index of allGear: {allGear[0].name}
+      <Gear allGear={allGear} />
     </main>
   );
 };
