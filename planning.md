@@ -12,3 +12,9 @@
 3. Backend creation
 
 4. Frontend creation
+
+Thursday---
+
+- Setup PSQL
+- Get backend and frontend connected
+-
