@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.t {
+  display: flex;
+  justify-content: center;
+}

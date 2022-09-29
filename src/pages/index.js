@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import Dropdown from "../components/Dropdown/Dropdown";
 import Filter from "../components/Filter/Filter";
 import Gear from "../components/Gear/Gear";
+import "./index.css";
 
 const IndexPage = () => {
   const [allGear, setAllGear] = useState([]);
@@ -33,9 +34,16 @@ const IndexPage = () => {
   }, [filterChoice]);
 
   return (
-    <main>
-      <Header />
-      <Dropdown filterChoice={filterChoice} setFilterChoice={setFilterChoice} />
+    <main className="main">
+      <div className="t">T</div>
+      <div className="nav-area">
+        <Dropdown
+          filterChoice={filterChoice}
+          setFilterChoice={setFilterChoice}
+        />
+        <Header />
+        <div>Right Filter</div>
+      </div>
       <Filter allGear={allGear} filterChoice={filterChoice} />
     </main>
   );

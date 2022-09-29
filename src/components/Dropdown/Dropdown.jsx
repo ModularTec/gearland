@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Dropdown.css";
 
 function Dropdown({ filterChoice, setFilterChoice }) {
   const filterNames = ["Synthesizer", "Pedal", "Drum Machine"];
@@ -12,7 +13,7 @@ function Dropdown({ filterChoice, setFilterChoice }) {
 
   return (
     <div>
-      <select onChange={handleMenuChoice}>
+      <select className="selectMenu" onChange={handleMenuChoice}>
         <option value="All Gear">All Gear</option>
         <option value="Synthesizer">Synthesizers</option>
         <option value="Pedal">Pedals</option>
