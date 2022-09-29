@@ -16,7 +16,7 @@ const IndexPage = () => {
       .get(`${url}gear`)
       .then((res) => {
         let allGear = res.data;
-        console.log(res.data);
+        // console.log(res.data);
         setAllGear(allGear);
       })
       .catch((error) => console.error(`Error: ${error}`));
@@ -26,12 +26,17 @@ const IndexPage = () => {
     getAllGear();
   }, []);
 
+  const [filterChoice, setFilterChoice] = useState("");
+
+  useEffect(() => {
+    console.log("indexFilterChoice--- ", filterChoice);
+  }, [filterChoice]);
+
   return (
     <main>
       <Header />
-      <Nav />
-      <Filter />
-      <Gear allGear={allGear} />
+      <Nav filterChoice={filterChoice} setFilterChoice={setFilterChoice} />
+      <Filter allGear={allGear} />
     </main>
   );
 };

@@ -1,13 +1,9 @@
 import React from "react";
 
-function Gear({ allGear }) {
-  // const mapGear = (gearList) => {
-  //   gearList.map((gear) => <div className="name">{gear.name}</div>);
-  // };
-
+const Gear = ({ filteredGear }) => {
   return (
     <div>
-      {allGear.map((gear) => (
+      {filteredGear.map((gear) => (
         <div className="gearItem">
           <div className="name">Name: {gear.name}</div>
           <div className="description">Description: {gear.description}</div>
@@ -22,6 +18,6 @@ function Gear({ allGear }) {
       ))}
     </div>
   );
-}
+};
 
 export default Gear;
