@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/Header/Header";
-import Nav from "../components/Nav/Nav";
+import Dropdown from "../components/Dropdown/Dropdown";
 import Filter from "../components/Filter/Filter";
 import Gear from "../components/Gear/Gear";
 
@@ -26,7 +26,7 @@ const IndexPage = () => {
     getAllGear();
   }, []);
 
-  const [filterChoice, setFilterChoice] = useState("");
+  const [filterChoice, setFilterChoice] = useState("All Gear");
 
   useEffect(() => {
     console.log("indexFilterChoice--- ", filterChoice);
@@ -35,7 +35,7 @@ const IndexPage = () => {
   return (
     <main>
       <Header />
-      <Nav filterChoice={filterChoice} setFilterChoice={setFilterChoice} />
+      <Dropdown filterChoice={filterChoice} setFilterChoice={setFilterChoice} />
       <Filter allGear={allGear} filterChoice={filterChoice} />
     </main>
   );

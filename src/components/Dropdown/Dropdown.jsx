@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-function Nav({ filterChoice, setFilterChoice }) {
+function Dropdown({ filterChoice, setFilterChoice }) {
   const filterNames = ["Synthesizer", "Pedal", "Drum Machine"];
-
-  // useEffect(() => {}, [filterChoice]);
 
   const handleMenuChoice = (event) => {
     event.preventDefault();
@@ -24,4 +22,4 @@ function Nav({ filterChoice, setFilterChoice }) {
   );
 }
 
-export default Nav;
+export default Dropdown;
