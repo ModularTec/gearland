@@ -36,7 +36,7 @@ const IndexPage = () => {
     <main>
       <Header />
       <Nav filterChoice={filterChoice} setFilterChoice={setFilterChoice} />
-      <Filter allGear={allGear} />
+      <Filter allGear={allGear} filterChoice={filterChoice} />
     </main>
   );
 };
