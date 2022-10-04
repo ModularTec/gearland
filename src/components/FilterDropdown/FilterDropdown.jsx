@@ -6,7 +6,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
     event.preventDefault();
     let menuValue = event.target.value;
     setFilterChoice(menuValue);
-    console.log(`You clicked on a menu item ${menuValue}`);
+    // console.log(`You clicked on a menu item ${menuValue}`);
   };
 
   return (

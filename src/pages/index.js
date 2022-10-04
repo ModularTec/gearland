@@ -3,7 +3,7 @@ import axios from "axios";
 import Header from "../components/Header/Header";
 import Filter from "../components/Filter/Filter";
 import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
-import Sort from "../components/Sort/Sort";
+// import Sort from "../components/Sort/Sort";
 import SortDropdown from "../components/SortDropdown/SortDropdown";
 import Gear from "../components/Gear/Gear";
 import "./index.css";
@@ -30,11 +30,11 @@ const IndexPage = () => {
 
   const [filterChoice, setFilterChoice] = useState("All Gear");
 
-  useEffect(() => {
-    console.log("indexFilterChoice--- ", filterChoice);
-  }, [filterChoice]);
+  // useEffect(() => {
+  //   console.log("indexFilterChoice--- ", filterChoice);
+  // }, [filterChoice]);
 
-  const [sortChoice, setSortChoice] = useState("date_added V");
+  const [sortChoice, setSortChoice] = useState("Price V");
 
   useEffect(() => {
     console.log("indexsortedGear--- ", sortChoice);
