@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./Dropdown.css";
+import "./FilterDropdown.css";
 
-function Dropdown({ filterChoice, setFilterChoice }) {
-  const filterNames = ["Synthesizer", "Pedal", "Drum Machine"];
-
+function FilterDropdown({ filterChoice, setFilterChoice }) {
   const handleMenuChoice = (event) => {
     event.preventDefault();
     let menuValue = event.target.value;
@@ -13,7 +11,7 @@ function Dropdown({ filterChoice, setFilterChoice }) {
 
   return (
     <div>
-      <select className="selectMenu" onChange={handleMenuChoice}>
+      <select className="filterMenu" onChange={handleMenuChoice}>
         <option value="All Gear">All Gear</option>
         <option value="Synthesizer">Synthesizers</option>
         <option value="Pedal">Pedals</option>
@@ -23,4 +21,4 @@ function Dropdown({ filterChoice, setFilterChoice }) {
   );
 }
 
-export default Dropdown;
+export default FilterDropdown;

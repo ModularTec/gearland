@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/Header/Header";
-import Dropdown from "../components/Dropdown/Dropdown";
 import Filter from "../components/Filter/Filter";
+import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
+import Sort from "../components/Sort/Sort";
+import SortDropdown from "../components/SortDropdown/SortDropdown";
 import Gear from "../components/Gear/Gear";
 import "./index.css";
 
@@ -17,7 +19,6 @@ const IndexPage = () => {
       .get(`${url}gear`)
       .then((res) => {
         let allGear = res.data;
-        // console.log(res.data);
         setAllGear(allGear);
       })
       .catch((error) => console.error(`Error: ${error}`));
@@ -33,18 +34,27 @@ const IndexPage = () => {
     console.log("indexFilterChoice--- ", filterChoice);
   }, [filterChoice]);
 
+  const [sortChoice, setSortChoice] = useState("date_added V");
+
+  useEffect(() => {
+    console.log("indexsortedGear--- ", sortChoice);
+  }, [sortChoice]);
+
   return (
     <main className="main">
-      <div className="t">T</div>
-      <div className="nav-area">
-        <Dropdown
+      <div className="nav-area-pos nav-area-style">
+        <FilterDropdown
           filterChoice={filterChoice}
           setFilterChoice={setFilterChoice}
         />
         <Header />
-        <div>Right Filter</div>
+        <SortDropdown sortChoice={sortChoice} setSortChoice={setSortChoice} />
       </div>
-      <Filter allGear={allGear} filterChoice={filterChoice} />
+      <Filter
+        allGear={allGear}
+        filterChoice={filterChoice}
+        sortChoice={sortChoice}
+      />
     </main>
   );
 };
