@@ -21,8 +21,8 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
         <div className="menu-btn-burger" onClick={handleMenuButtonClick}></div>
       </div>
       {menuOpen ? (
-        <div>
-          <select className="filterMenu" onChange={handleMenuChoice}>
+        <div className="filter-box">
+          <select size="4" className="filter-menu" onChange={handleMenuChoice}>
             <option value="All Gear">All Gear</option>
             <option value="Synthesizer">Synthesizers</option>
             <option value="Pedal">Pedals</option>

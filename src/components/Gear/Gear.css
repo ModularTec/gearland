@@ -1,3 +1,8 @@
+.all-gear {
+  position: relative;
+  z-index: -1;
+}
+
 .gearItem-pos {
   margin: 2rem 0 0 0;
 }

@@ -4,7 +4,7 @@ import "./Gear.css";
 const Gear = ({ sortedGear }) => {
   // console.log("Here is sorted gear:", sortedGear);
   return (
-    <div>
+    <div className="all-gear">
       {sortedGear.map((gear) => (
         <div className="gearItem-pos gearItem-style">
           <div className="gearItemName-style">{gear.name}</div>
