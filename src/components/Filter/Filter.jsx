@@ -5,17 +5,14 @@ import "./Filter.css";
 
 const Filter = ({ allGear, filterChoice, sortChoice }) => {
   const [filteredGear, setFilteredGear] = useState([]);
-  // const [filterType, setFilterType] = useState("Pedal");
 
   const filterByType = (gearArray) => {
-    // console.log("filterByType after sortChoiceClicked:::", gearArray);
     if (filterChoice === "All Gear") return gearArray;
     else return gearArray.filter((item) => item.type === filterChoice);
   };
 
   useEffect(() => {
     setFilteredGear(filterByType(allGear));
-    console.log("sortChoiceclicked FILTER::::", sortChoice);
   }, [allGear, filterChoice, sortChoice]);
 
   return (

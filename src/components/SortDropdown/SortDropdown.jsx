@@ -6,7 +6,6 @@ const SortDropdown = ({ sortChoice, setSortChoice }) => {
     event.preventDefault();
     let sortMenuValue = event.target.value;
     setSortChoice(sortMenuValue);
-    console.log(`You chose to sort by ${sortMenuValue}`);
   };
 
   return (

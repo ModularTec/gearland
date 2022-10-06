@@ -3,13 +3,15 @@ import axios from "axios";
 import Header from "../components/Header/Header";
 import Filter from "../components/Filter/Filter";
 import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
-// import Sort from "../components/Sort/Sort";
 import SortDropdown from "../components/SortDropdown/SortDropdown";
 import Gear from "../components/Gear/Gear";
 import "./index.css";
 
 const IndexPage = () => {
+  // STATES
   const [allGear, setAllGear] = useState([]);
+  const [filterChoice, setFilterChoice] = useState("All Gear");
+  const [sortChoice, setSortChoice] = useState("Price V");
 
   // get data from API
   const url = "http://localhost:5000/";
@@ -27,18 +29,6 @@ const IndexPage = () => {
   useEffect(() => {
     getAllGear();
   }, []);
-
-  const [filterChoice, setFilterChoice] = useState("All Gear");
-
-  // useEffect(() => {
-  //   console.log("indexFilterChoice--- ", filterChoice);
-  // }, [filterChoice]);
-
-  const [sortChoice, setSortChoice] = useState("Price V");
-
-  useEffect(() => {
-    console.log("indexsortedGear--- ", sortChoice);
-  }, [sortChoice]);
 
   return (
     <main className="main">

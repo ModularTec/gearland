@@ -6,22 +6,12 @@ const Sort = ({ filteredGear, sortChoice }) => {
 
   const sortByDescendingPrice = (gearArray) => {
     let sorted = gearArray;
-    // console.log("sortByDescendingPrice", gearArray);
-    // console.log(
-    //   "sortedgear:::::::::",
-    //   gearArray.sort((a, b) => b.price - a.price)
-    // );
     sorted.sort((a, b) => b.price - a.price);
     return sorted;
   };
 
   const sortByAscendingPrice = (gearArray) => {
     let sorted = gearArray;
-    // console.log("Sort by ascending price");
-    // console.log(
-    //   "sort by ascending price:::::::::::",
-    //   sorted.sort((a, b) => b.price - a.price)
-    // );
     sorted.sort((a, b) => a.price - b.price);
     return sorted;
   };
@@ -35,7 +25,6 @@ const Sort = ({ filteredGear, sortChoice }) => {
   // };
 
   const mySortChooser = (gearToSort) => {
-    console.log(`sortChoice is ${sortChoice}`);
     // if (sortChoice === "date_added V") return sortByDescendingDate(gearToSort);
     // if (sortChoice === "date_added A") return sortByAscendingDate(gearToSort);
     if (sortChoice === "Price V") return sortByDescendingPrice(gearToSort);
@@ -43,10 +32,8 @@ const Sort = ({ filteredGear, sortChoice }) => {
   };
 
   useEffect(() => {
-    setSortedGear(mySortChooser(filteredGear));
-    // mySortChooser(filteredGear);
-    console.log("filteredGear::::", filteredGear);
-    console.log("sortChoice::::", sortChoice);
+    const newSortedGear = mySortChooser(filteredGear);
+    setSortedGear(newSortedGear);
   }, [filteredGear, sortChoice]);
 
   return (

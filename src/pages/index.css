@@ -4,11 +4,14 @@ body {
   font-family: Quantico, sans-serif;
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 .nav-area-pos {
@@ -29,4 +32,7 @@ body {
 .t {
   display: flex;
   justify-content: center;
+}
+
+.menu-btn {
 }
