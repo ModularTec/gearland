@@ -2,7 +2,7 @@ import React from "react";
 import "./Gear.css";
 
 const Gear = ({ sortedGear }) => {
-  // console.log("Here is sorted gear:", sortedGear);
+  console.log("Here is sorted gear:", sortedGear);
   return (
     <div className="all-gear">
       {sortedGear.map((gear) => (
