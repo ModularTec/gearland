@@ -3,8 +3,10 @@ import "./FilterDropdown.css";
 
 function FilterDropdown({ filterChoice, setFilterChoice }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mode, setMode] = useState("open");
 
   const handleMenuButtonClick = () => {
+    setMode(mode === "open" ? "" : "open");
     if (menuOpen === false) setMenuOpen(true);
     else setMenuOpen(false);
   };
@@ -17,8 +19,11 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
 
   return (
     <div>
-      <div className="menu-btn open">
-        <div className="menu-btn-burger" onClick={handleMenuButtonClick}></div>
+      <div>
+        <div
+          className={`menu-btn-burger ${"menu-btn-" + mode}`}
+          onClick={handleMenuButtonClick}
+        ></div>
       </div>
       {menuOpen ? (
         <div className="filter-box">
