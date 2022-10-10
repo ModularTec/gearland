@@ -1,16 +1,27 @@
 .all-gear {
-  position: relative;
   z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.gearItem-pos {
+.gear-item-pos {
+  /* display: flex;
+  flex-direction: column; */
+
   margin: 2rem 0 0 0;
+  width: 85%;
 }
 
-.gearItem-style {
-  background-color: rgba(230, 252, 72, 1);
+.gear-item-style {
+  color: rgb(75, 75, 75);
 }
 
-.gearItemName-style {
+.gear-item-name-style {
   font-size: 1.1rem;
+  color: black;
+}
+
+.gear-item-image {
+  width: 100%;
 }

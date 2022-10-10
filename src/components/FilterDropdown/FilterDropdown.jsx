@@ -7,6 +7,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
 
   const handleMenuButtonClick = () => {
     setMode(mode === "open" ? "" : "open");
+    console.log("mode", mode);
     if (menuOpen === false) setMenuOpen(true);
     else setMenuOpen(false);
   };
@@ -17,9 +18,11 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
     setFilterChoice(menuValue);
   };
 
+  // TODO: Close menu if user clicks anything else than the menu
+
   return (
     <div>
-      <div>
+      <div className="menu-btn">
         <div
           className={`menu-btn-burger ${"menu-btn-" + mode}`}
           onClick={handleMenuButtonClick}
@@ -42,12 +45,3 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
 }
 
 export default FilterDropdown;
-
-// <div>
-// <select className="filterMenu" onChange={handleMenuChoice}>
-//   <option value="All Gear">All Gear</option>
-//   <option value="Synthesizer">Synthesizers</option>
-//   <option value="Pedal">Pedals</option>
-//   <option value="Drum Machine">Drum Machines</option>
-//   </select>
-// </div>
