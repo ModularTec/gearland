@@ -5,6 +5,7 @@ import Filter from "../components/Filter/Filter";
 import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
 import SortDropdown from "../components/SortDropdown/SortDropdown";
 import Gear from "../components/Gear/Gear";
+import Contact from "../components/Contact/Contact";
 import "./index.css";
 
 const IndexPage = () => {
@@ -45,6 +46,7 @@ const IndexPage = () => {
         filterChoice={filterChoice}
         sortChoice={sortChoice}
       />
+      <Contact />
     </main>
   );
 };

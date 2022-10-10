@@ -15,7 +15,7 @@ const Gear = ({ sortedGear }) => {
             <img className="gear-item-image" src={Images}></img>
             <div className="gear-item-name-style">{gear.name}</div>
             <div className="gear-item-descr">
-              Description {gear.description}
+              Description: {gear.description}
             </div>
             <div className="type">Type: {gear.type}</div>
             <div className="quality">Quality: {gear.quality}</div>
