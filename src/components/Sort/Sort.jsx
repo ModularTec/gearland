@@ -15,14 +15,14 @@ const Sort = ({ filteredGear, sortChoice }) => {
   const sortByAscendingDate = (myGear) => {
     return myGear.sort(
       (a, b) =>
-        convertDateToNumber(b.date_added) - convertDateToNumber(a.date_added)
+        convertDateToNumber(a.date_added) - convertDateToNumber(b.date_added)
     );
   };
 
   const sortByDescendingDate = (myGear) => {
     return myGear.sort(
       (a, b) =>
-        convertDateToNumber(a.date_added) - convertDateToNumber(b.date_added)
+        convertDateToNumber(b.date_added) - convertDateToNumber(a.date_added)
     );
   };
 
