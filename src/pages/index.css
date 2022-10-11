@@ -4,6 +4,7 @@ body {
   font-family: Quantico, sans-serif;
   margin: 0px;
   padding: 0px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -27,6 +28,8 @@ body {
 
 .nav-area-style {
   background-color: rgba(163, 167, 138, 1);
+  /* background-color: red; */
+  /* width: 100%; */
 }
 
 .t {

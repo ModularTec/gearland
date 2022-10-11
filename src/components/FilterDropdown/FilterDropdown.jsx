@@ -12,7 +12,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
     else setMenuOpen(false);
   };
 
-  const handleMenuChoice = (event) => {
+  const handleFilterMenuChoice = (event) => {
     event.preventDefault();
     let menuValue = event.target.value;
     setFilterChoice(menuValue);
@@ -30,7 +30,11 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
       </div>
       {menuOpen ? (
         <div className="filter-box">
-          <select size="4" className="filter-menu" onChange={handleMenuChoice}>
+          <select
+            size="4"
+            className="filter-menu"
+            onChange={handleFilterMenuChoice}
+          >
             <option value="All Gear">All Gear</option>
             <option value="Synthesizer">Synthesizers</option>
             <option value="Pedal">Pedals</option>

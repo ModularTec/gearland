@@ -9,7 +9,7 @@ const SortDropdown = ({ sortChoice, setSortChoice }) => {
     else setSortMenuOpen(false);
   };
 
-  const handleMenuChoice = (event) => {
+  const handleSortMenuChoice = (event) => {
     event.preventDefault();
     let sortMenuValue = event.target.value;
     setSortChoice(sortMenuValue);
@@ -33,15 +33,27 @@ const SortDropdown = ({ sortChoice, setSortChoice }) => {
       </svg>
       {sortMenuOpen ? (
         <div className="sort-box">
-          <select size="1" className="sort-menu" onChange={handleMenuChoice}>
-            <option value="date_added V">Date: Newest</option>
-            <option value="date_added A">Date: Oldest</option>
-            <option value="Price V">Price: High to Low</option>
-            <option value="Price A">Price: Low to High</option>
+          <select
+            size="4"
+            className="sort-menu"
+            onChange={handleSortMenuChoice}
+          >
+            <option className="sortOption" value="date_added V">
+              Date: Newest
+            </option>
+            <option className="sortOption" value="date_added A">
+              Date: Oldest
+            </option>
+            <option className="sortOption" value="Price V">
+              Price: Highest
+            </option>
+            <option className="sortOption" value="Price A">
+              Price: Lowest
+            </option>
           </select>
         </div>
       ) : (
-        <div></div>
+        <div className="sortClosed"></div>
       )}
     </div>
   );

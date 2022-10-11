@@ -1,6 +1,6 @@
 .filter-menu {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   /* min-height: 250px; */
   background-color: rgba(163, 167, 138, 0.95);
   border: none;
