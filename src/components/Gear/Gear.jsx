@@ -3,10 +3,8 @@ import "./Gear.css";
 import Images from "../../images/schlappi.jpeg";
 
 const Gear = ({ sortedGear }) => {
-  console.log("Here is sorted gear:", sortedGear);
-
   if (sortedGear.length === 0) {
-    return <div>No items</div>;
+    return <div></div>;
   } else
     return (
       <div className="all-gear">

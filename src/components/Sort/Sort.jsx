@@ -4,47 +4,57 @@ import Gear from "../Gear/Gear";
 const Sort = ({ filteredGear, sortChoice }) => {
   const [sortedGear, setSortedGear] = useState([]);
 
-  // const sortByDescendingPrice = (gearArray) => {
-  //   let sorted = gearArray;
-  //   sorted.sort((a, b) => b.price - a.price);
-  //   return sorted;
-  // };
+  const convertDateToNumber = (dateString) => {
+    const removeNonNumbers = (a) => {
+      return a.toString().replace(/\D/g, "");
+    };
+    let cleanedStr = removeNonNumbers(dateString);
+    return Number(cleanedStr);
+  };
 
-  // const sortByAscendingPrice = (gearArray) => {
-  //   // console.log("sortascendingprice clicked");
-  //   let sorted = gearArray;
-  //   sorted.sort((a, b) => a.price - b.price);
-  //   // console.log(sorted);
-  //   return sorted;
-  // };
+  const sortByAscendingDate = (myGear) => {
+    return myGear.sort(
+      (a, b) =>
+        convertDateToNumber(b.date_added) - convertDateToNumber(a.date_added)
+    );
+  };
 
-  // const sortByDescendingDate = (gearArray) => {
-  //   return gearArray.sort((a, b) => a.date_added - b.date_added);
-  // };
+  const sortByDescendingDate = (myGear) => {
+    return myGear.sort(
+      (a, b) =>
+        convertDateToNumber(a.date_added) - convertDateToNumber(b.date_added)
+    );
+  };
 
-  // const sortByAscendingDate = (gearArray) => {
-  //   return gearArray.sort((a, b) => b.date_added - a.date_added);
-  // };
+  const sortByAscendingPrice = (myGear) => {
+    return myGear.sort((a, b) => a.price - b.price);
+  };
 
-  const mySortChooser = (gearToSort) => {
-    // if (sortChoice === "date_added V") return sortByDescendingDate(gearToSort);
-    // if (sortChoice === "date_added A") return sortByAscendingDate(gearToSort);
-    // if (sortChoice === "Price V") return sortByDescendingPrice(gearToSort);
-    // if (sortChoice === "Price A") return sortByAscendingPrice(gearToSort);
-    // const result = await setTimeout(1000, "resolved");
-    if (sortChoice === "Price V")
-      return [...gearToSort.sort((a, b) => b.price - a.price)];
-    if (sortChoice === "Price A")
-      return [...gearToSort.sort((a, b) => a.price - b.price)];
-    // result = await setTimeout(1000, "resolved");
+  const sortByDescendingPrice = (myGear) => {
+    return myGear.sort((a, b) => b.price - a.price);
+  };
+
+  const sortChooser = (gearToSort) => {
+    let destructuredGear = [...gearToSort];
+    if (sortChoice === "date_added V") {
+      return sortByDescendingDate(destructuredGear);
+    }
+    if (sortChoice === "date_added A") {
+      return sortByAscendingDate(destructuredGear);
+    }
+    if (sortChoice === "Price V") {
+      return sortByDescendingPrice(destructuredGear);
+    }
+    if (sortChoice === "Price A") {
+      return sortByAscendingPrice(destructuredGear);
+    }
   };
 
   useEffect(() => {
-    const newSortedGear = mySortChooser(filteredGear);
+    const newSortedGear = sortChooser(filteredGear);
     setSortedGear(newSortedGear);
   }, [filteredGear, sortChoice]);
 
-  // console.log(sortedGear);
   return (
     <div>
       <Gear sortedGear={sortedGear} />

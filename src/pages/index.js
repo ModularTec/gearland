@@ -12,7 +12,7 @@ const IndexPage = () => {
   // STATES
   const [allGear, setAllGear] = useState([]);
   const [filterChoice, setFilterChoice] = useState("All Gear");
-  const [sortChoice, setSortChoice] = useState("Price V");
+  const [sortChoice, setSortChoice] = useState("date_added V");
 
   // get data from API
   const url = "http://localhost:5000/";
@@ -27,6 +27,7 @@ const IndexPage = () => {
       .catch((error) => console.error(`Error: ${error}`));
   };
 
+  // Should we use onMount()?
   useEffect(() => {
     getAllGear();
   }, []);

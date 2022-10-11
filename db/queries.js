@@ -7,8 +7,6 @@ const pool = new Pool({
   port: 5432,
 });
 
-// ENDPOINTS
-
 // GET all gear
 const getAllGear = (request, response) => {
   pool.query("SELECT * FROM gear", (error, results) => {
