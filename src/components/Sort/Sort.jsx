@@ -33,9 +33,9 @@ const Sort = ({ filteredGear, sortChoice }) => {
     // if (sortChoice === "Price A") return sortByAscendingPrice(gearToSort);
     // const result = await setTimeout(1000, "resolved");
     if (sortChoice === "Price V")
-      return gearToSort.sort((a, b) => b.price - a.price);
+      return [...gearToSort.sort((a, b) => b.price - a.price)];
     if (sortChoice === "Price A")
-      return gearToSort.sort((a, b) => a.price - b.price);
+      return [...gearToSort.sort((a, b) => a.price - b.price)];
     // result = await setTimeout(1000, "resolved");
   };
 

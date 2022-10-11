@@ -33,7 +33,7 @@ const SortDropdown = ({ sortChoice, setSortChoice }) => {
       </svg>
       {sortMenuOpen ? (
         <div className="sort-box">
-          <select size="4" className="sort-menu" onChange={handleMenuChoice}>
+          <select size="1" className="sort-menu" onChange={handleMenuChoice}>
             <option value="date_added V">Date: Newest</option>
             <option value="date_added A">Date: Oldest</option>
             <option value="Price V">Price: High to Low</option>
