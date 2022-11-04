@@ -19,6 +19,7 @@
   font-family: Quantico;
   margin-top: -2px;
   color: white;
+  cursor: pointer;
 }
 
 .sortOption {
@@ -34,4 +35,8 @@
   width: 100px;
   background-color: orange;
   z-index: 5;
+}
+
+.sort-svg {
+  cursor: pointer;
 }

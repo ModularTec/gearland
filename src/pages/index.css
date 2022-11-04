@@ -28,11 +28,4 @@ body {
 
 .nav-area-style {
   background-color: rgba(163, 167, 138, 1);
-  /* background-color: red; */
-  /* width: 100%; */
-}
-
-.t {
-  display: flex;
-  justify-content: center;
 }

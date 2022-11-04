@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./SortDropdown.css";
 
 const SortDropdown = ({ sortChoice, setSortChoice }) => {
@@ -13,13 +13,29 @@ const SortDropdown = ({ sortChoice, setSortChoice }) => {
     event.preventDefault();
     let sortMenuValue = event.target.value;
     setSortChoice(sortMenuValue);
+    setSortMenuOpen(false);
   };
 
-  // TODO: close menu if user clicks anything else than the menu
+  // Close menu if user clicks anything other than the menu
+  const ref = useRef();
+  useEffect(() => {
+    const checkIfClickedOutsideSort = (e) => {
+      // if menu open and clicked target is not within menu, close menu
+      if (sortMenuOpen && ref.current && !ref.current.contains(e.target)) {
+        setSortMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", checkIfClickedOutsideSort);
+    return () => {
+      // cleanup event listener
+      document.removeEventListener("mousedown", checkIfClickedOutsideSort);
+    };
+  }, [sortMenuOpen]);
 
   return (
-    <div>
+    <div className="wrapper" ref={ref}>
       <svg
+        className="sort-svg"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         width="40"

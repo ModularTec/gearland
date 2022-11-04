@@ -70,3 +70,22 @@
 .menu-btn-open .menu-btn-burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
+
+select {
+  cursor: pointer;
+  border: 0;
+  outline: none;
+}
+
+option:hover {
+  background-color: red;
+}
+
+option:active {
+  background-color: green;
+}
+
+select:focus {
+  background-color: gray;
+  outline: none;
+}
