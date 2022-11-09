@@ -1,9 +1,17 @@
+.all-gear-container {
+  display: flex;
+  justify-content: center;
+  max-height: 90vh;
+  overflow: auto;
+}
+
 .all-gear {
   z-index: -1;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  width: 90%;
 }
 
 .gear-container {
