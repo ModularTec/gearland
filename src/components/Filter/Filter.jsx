@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Gear from "../Gear/Gear";
 import Sort from "../Sort/Sort";
-import "./Filter.css";
 
 const Filter = ({ allGear, filterChoice, sortChoice }) => {
   const [filteredGear, setFilteredGear] = useState([]);

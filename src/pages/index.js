@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/Header/Header";
 import Filter from "../components/Filter/Filter";
-import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
-import SortDropdown from "../components/SortDropdown/SortDropdown";
-import Gear from "../components/Gear/Gear";
 import Contact from "../components/Contact/Contact";
 import "./index.css";
 
@@ -27,7 +24,6 @@ const IndexPage = () => {
       .catch((error) => console.error(`Error: ${error}`));
   };
 
-  // Should we use onMount()?
   useEffect(() => {
     getAllGear();
   }, []);
@@ -35,12 +31,12 @@ const IndexPage = () => {
   return (
     <main className="main">
       <div className="nav-area-pos nav-area-style">
-        <FilterDropdown
+        <Header
           filterChoice={filterChoice}
           setFilterChoice={setFilterChoice}
+          sortChoice={sortChoice}
+          setSortChoice={setSortChoice}
         />
-        <Header />
-        <SortDropdown sortChoice={sortChoice} setSortChoice={setSortChoice} />
       </div>
       <Filter
         allGear={allGear}

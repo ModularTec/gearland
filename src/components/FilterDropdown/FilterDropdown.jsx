@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./FilterDropdown.css";
 
 function FilterDropdown({ filterChoice, setFilterChoice }) {
@@ -9,7 +10,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
   const ref = useRef();
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
-      // if menu opand and clicked target is not within menu, close menu
+      // if menu open and and clicked target is not within menu, close menu
       if (menuOpen && ref.current && !ref.current.contains(e.target)) {
         setMenuOpen(false);
         setMode("");
@@ -31,21 +32,28 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
 
   const handleFilterMenuChoice = (event) => {
     event.preventDefault();
+
     let menuValue = event.target.value;
+    console.log(menuValue);
+    if (menuValue === "http://localhost:8000/about") {
+      window.location.href = "http://localhost:8000/about";
+    }
+    // if menuValue = about or home, change window location to there
+    // else do the normal menu handling below
     setFilterChoice(menuValue);
     setMenuOpen(false);
     setMode("");
   };
 
   return (
-    <div className="wrapper" ref={ref}>
+    <div className="filter-wrapper" ref={ref}>
       <div className="menu-btn" onClick={handleFilterMenuButtonClick}>
         <div className={`menu-btn-burger ${"menu-btn-" + mode}`}></div>
       </div>
       {menuOpen ? (
         <div className="filter-box">
           <select
-            size="4"
+            size="5"
             className="filter-menu"
             onChange={handleFilterMenuChoice}
           >
@@ -53,7 +61,16 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
             <option value="Synthesizer">Synthesizers</option>
             <option value="Pedal">Pedals</option>
             <option value="Drum Machine">Drum Machines</option>
+            <option value="http://localhost:8000/about">About</option>
           </select>
+          {/* <ul>
+            <li className="nav-links">
+              <a href="/">Home</a>
+            </li>
+            <li className="nav-links">
+              <a href="/about">About</a>
+            </li>
+          </ul> */}
         </div>
       ) : (
         <div></div>

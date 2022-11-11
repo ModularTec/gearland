@@ -33,7 +33,7 @@ const SortDropdown = ({ sortChoice, setSortChoice }) => {
   }, [sortMenuOpen]);
 
   return (
-    <div className="wrapper" ref={ref}>
+    <div className="sort-wrapper" ref={ref}>
       <svg
         className="sort-svg"
         version="1.1"
