@@ -37,6 +37,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
     console.log(menuValue);
     if (menuValue === "http://localhost:8000/about") {
       window.location.href = "http://localhost:8000/about";
+      // <Link to <About props=props>>
     }
     // if menuValue = about or home, change window location to there
     // else do the normal menu handling below

@@ -3,6 +3,7 @@ import axios from "axios";
 import Header from "../components/Header/Header";
 import Filter from "../components/Filter/Filter";
 import Contact from "../components/Contact/Contact";
+import GearTitle from "../components/GearTitle/GearTitle";
 import "./index.css";
 
 const IndexPage = () => {
@@ -38,6 +39,7 @@ const IndexPage = () => {
           setSortChoice={setSortChoice}
         />
       </div>
+      <GearTitle filterChoice={filterChoice} />
       <Filter
         allGear={allGear}
         filterChoice={filterChoice}
