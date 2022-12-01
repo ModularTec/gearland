@@ -28,3 +28,10 @@ body {
 .nav-area-style {
   background-color: rgba(163, 167, 138, 1);
 }
+
+.gear-and-sort {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3em;
+  color: rgba(163, 167, 138, 1);
+}

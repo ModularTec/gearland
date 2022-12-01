@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import Filter from "../components/Filter/Filter";
 import Contact from "../components/Contact/Contact";
 import GearTitle from "../components/GearTitle/GearTitle";
+import SortDropdown from "../components/SortDropdown/SortDropdown";
 import "./index.css";
 
 const IndexPage = () => {
@@ -39,7 +40,14 @@ const IndexPage = () => {
           setSortChoice={setSortChoice}
         />
       </div>
-      <GearTitle filterChoice={filterChoice} />
+      <div className="gear-and-sort">
+        <GearTitle filterChoice={filterChoice} />
+        <SortDropdown
+          className="sort-dropdown"
+          sortChoice={sortChoice}
+          setSortChoice={setSortChoice}
+        />
+      </div>
       <Filter
         allGear={allGear}
         filterChoice={filterChoice}

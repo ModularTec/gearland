@@ -1,8 +1,7 @@
 import React from "react";
-import "./GearTitle.css";
 
 const GearTitle = ({ filterChoice }) => {
-  return <div className="my-title">{filterChoice}</div>;
+  return <div className="filter-title">{filterChoice}</div>;
 };
 
 export default GearTitle;

@@ -17,11 +17,6 @@ const Header = ({
         setFilterChoice={setFilterChoice}
       />
       <div className="title-style">Gearland</div>
-      <SortDropdown
-        className="sort-dropdown"
-        sortChoice={sortChoice}
-        setSortChoice={setSortChoice}
-      />
     </div>
   );
 };
