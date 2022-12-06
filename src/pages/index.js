@@ -40,13 +40,15 @@ const IndexPage = () => {
           setSortChoice={setSortChoice}
         />
       </div>
-      <div className="gear-and-sort">
-        <GearTitle filterChoice={filterChoice} />
-        <SortDropdown
-          className="sort-dropdown"
-          sortChoice={sortChoice}
-          setSortChoice={setSortChoice}
-        />
+      <div className="gear-and-sort-box">
+        <div className="gear-and-sort">
+          <GearTitle filterChoice={filterChoice} />
+          <SortDropdown
+            className="sort-dropdown"
+            sortChoice={sortChoice}
+            setSortChoice={setSortChoice}
+          />
+        </div>
       </div>
       <Filter
         allGear={allGear}

@@ -1,33 +1,18 @@
-/* .sort-box {
-  position: absolute;
-  width: 70%;
-  left: 0px;
-  margin-right: 50px;
-}
-
 .sort-menu {
-  display: flex;
-  width: 80%;
-
-  background-color: rgba(163, 167, 138, 0.95);
-  border: none;
-  z-index: 0;
-  margin: 0px;
-  padding: 0px;
-  overflow: auto;
-  font-size: 1.5rem;
-  line-height: 4;
+  width: 300px;
   font-family: Quantico;
-  margin-top: -2px;
-  color: rgb(142, 7, 7);
+  background: #d9d9d9;
+  margin: 30px auto;
+  /* padding: 30px; */
+  border: solid;
+  border-color: rgba(163, 167, 138, 1);
+  color: rgba(163, 167, 138, 1);
+  background-color: white;
+  font-size: 0.6em;
   cursor: pointer;
+  display: block;
 }
 
-.sortOption {
-  display: flex;
-  justify-content: flex-end;
-}
-*/
 .sortClosed {
   position: absolute;
 

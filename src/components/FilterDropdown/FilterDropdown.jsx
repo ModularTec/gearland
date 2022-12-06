@@ -64,14 +64,6 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
             <option value="Drum Machine">Drum Machines</option>
             <option value="http://localhost:8000/about">About</option>
           </select>
-          {/* <ul>
-            <li className="nav-links">
-              <a href="/">Home</a>
-            </li>
-            <li className="nav-links">
-              <a href="/about">About</a>
-            </li>
-          </ul> */}
         </div>
       ) : (
         <div></div>

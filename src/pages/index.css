@@ -31,7 +31,21 @@ body {
 
 .gear-and-sort {
   display: flex;
-  justify-content: space-around;
-  font-size: 3em;
+  justify-content: space-between;
+  font-size: 2em;
+  align-items: center;
+  /* margin-left: 100px; */
+  width: 86%;
   color: rgba(163, 167, 138, 1);
+  /* background-color: pink; */
+}
+
+.gear-and-sort-box {
+  display: flex;
+  justify-content: center;
+}
+
+.sort-dropdown {
+  width: 40px;
+  height: 100px;
 }

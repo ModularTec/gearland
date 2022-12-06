@@ -11,7 +11,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 90%;
+  width: 95%;
 }
 
 .gear-container {
@@ -21,6 +21,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  /* background-color: pink; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -41,7 +42,6 @@
 }
 
 .gear-texts {
-  /* background-color: lightgreen; */
   width: 100%;
   flex-wrap: wrap;
 }
@@ -50,15 +50,16 @@
   color: #b6b6b6;
   font-size: 0.8rem;
   width: 80%;
-  /* background-color: lightblue; */
 }
 
 .gear-item-image {
   width: 100%;
+  margin-bottom: 0.25rem;
 }
 
 .gear-item-name-style {
   font-size: 1.1rem;
   color: black;
   width: 60%;
+  margin-bottom: 0.25rem;
 }
