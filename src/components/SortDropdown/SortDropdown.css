@@ -1,9 +1,8 @@
 .sort-menu {
-  width: 300px;
+  width: 250px;
   font-family: Quantico;
   background: #d9d9d9;
   margin: 30px auto;
-  /* padding: 30px; */
   border: solid;
   border-color: rgba(163, 167, 138, 1);
   color: rgba(163, 167, 138, 1);
@@ -11,18 +10,4 @@
   font-size: 0.6em;
   cursor: pointer;
   display: block;
-}
-
-.sortClosed {
-  position: absolute;
-
-  margin-right: 50px;
-  height: 100px;
-  width: 100px;
-  background-color: orange;
-  z-index: 5;
-}
-
-.sort-svg {
-  cursor: pointer;
 }

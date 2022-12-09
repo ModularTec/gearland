@@ -43,6 +43,7 @@ body {
 .gear-and-sort-box {
   display: flex;
   justify-content: center;
+  margin-bottom: -40px;
 }
 
 .sort-dropdown {

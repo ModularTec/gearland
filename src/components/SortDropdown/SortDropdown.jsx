@@ -29,30 +29,22 @@ const SortDropdown = ({ sortChoice, setSortChoice }) => {
 
   return (
     <div className="sort-wrapper" ref={ref}>
-      {sortMenuOpen ? (
-        <div className="sort-box">
-          <select
-            size="1"
-            className="sort-menu"
-            onChange={handleSortMenuChoice}
-          >
-            <option className="sortOption" value="date_added V">
-              Date: Newest
-            </option>
-            <option className="sortOption" value="date_added A">
-              Date: Oldest
-            </option>
-            <option className="sortOption" value="Price V">
-              Price: Highest
-            </option>
-            <option className="sortOption" value="Price A">
-              Price: Lowest
-            </option>
-          </select>
-        </div>
-      ) : (
-        <div className="sortClosed"></div>
-      )}
+      <div className="sort-box">
+        <select size="1" className="sort-menu" onChange={handleSortMenuChoice}>
+          <option className="sortOption" value="date_added V">
+            Date: Newest
+          </option>
+          <option className="sortOption" value="date_added A">
+            Date: Oldest
+          </option>
+          <option className="sortOption" value="Price V">
+            Price: Highest
+          </option>
+          <option className="sortOption" value="Price A">
+            Price: Lowest
+          </option>
+        </select>
+      </div>
     </div>
   );
 };

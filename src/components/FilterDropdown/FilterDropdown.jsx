@@ -6,9 +6,9 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mode, setMode] = useState("open");
 
-  // Close menu if user clicks anything other than the menu
   const ref = useRef();
   useEffect(() => {
+    // Close menu if user clicks anything other than the menu
     const checkIfClickedOutside = (e) => {
       // if menu open and and clicked target is not within menu, close menu
       if (menuOpen && ref.current && !ref.current.contains(e.target)) {
@@ -37,7 +37,6 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
     console.log(menuValue);
     if (menuValue === "http://localhost:8000/about") {
       window.location.href = "http://localhost:8000/about";
-      // <Link to <About props=props>>
     }
     // if menuValue = about or home, change window location to there
     // else do the normal menu handling below
