@@ -6,30 +6,14 @@ import Contact from "../components/Contact/Contact";
 import GearTitle from "../components/GearTitle/GearTitle";
 import SortDropdown from "../components/SortDropdown/SortDropdown";
 import "./about.css";
+import Index from "./index.js";
 
-const About = () => {
-  // STATES
-  const [allGear, setAllGear] = useState([]);
-  const [filterChoice, setFilterChoice] = useState("All Gear");
-  const [sortChoice, setSortChoice] = useState("date_added V");
-
-  // get data from API
-  const url = "http://localhost:5000/";
-
-  const getAllGear = () => {
-    axios
-      .get(`${url}gear`)
-      .then((res) => {
-        let allGear = res.data;
-        setAllGear(allGear);
-      })
-      .catch((error) => console.error(`Error: ${error}`));
-  };
-
-  useEffect(() => {
-    getAllGear();
-  }, []);
-
+const About = ({
+  filterChoice,
+  setFilterChoice,
+  sortChoice,
+  setSortChoice,
+}) => {
   return (
     <main className="main">
       <div className="nav-area-pos nav-area-style">
@@ -42,21 +26,6 @@ const About = () => {
       </div>
       <h3>About Us!</h3>
       <div>WHat's up ya'll</div>
-      {/* <div className="gear-and-sort-box">
-        <div className="gear-and-sort">
-          <GearTitle filterChoice={filterChoice} />
-          <SortDropdown
-            className="sort-dropdown"
-            sortChoice={sortChoice}
-            setSortChoice={setSortChoice}
-          />
-        </div>
-      </div> */}
-      {/* <Filter
-        allGear={allGear}
-        filterChoice={filterChoice}
-        sortChoice={sortChoice}
-      /> */}
       <Contact />
     </main>
   );
