@@ -35,9 +35,14 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
 
     let menuValue = event.target.value;
     console.log(menuValue);
-    if (menuValue === "http://localhost:8000/about") {
+    if (menuValue === "about") {
       window.location.href = "http://localhost:8000/about";
     }
+    if (window.location.href === "http://localhost:8000/") {
+    } else {
+      window.location.href = "http://localhost:8000";
+    }
+
     // if menuValue = about or home, change window location to there
     // else do the normal menu handling below
     setFilterChoice(menuValue);
@@ -61,7 +66,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
             <option value="Synthesizer">Synthesizers</option>
             <option value="Pedal">Pedals</option>
             <option value="Drum Machine">Drum Machines</option>
-            <option value="http://localhost:8000/about">About</option>
+            <option value="about">About</option>
           </select>
         </div>
       ) : (

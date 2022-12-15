@@ -5,7 +5,9 @@ import Filter from "../components/Filter/Filter";
 import Contact from "../components/Contact/Contact";
 import GearTitle from "../components/GearTitle/GearTitle";
 import SortDropdown from "../components/SortDropdown/SortDropdown";
+import About from "./About";
 import "./index.css";
+import { Link } from "gatsby";
 
 const IndexPage = () => {
   // STATES
