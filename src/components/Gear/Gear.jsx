@@ -1,6 +1,5 @@
 import React from "react";
 import "./Gear.css";
-// import Images from "../images";
 
 const Gear = ({ sortedGear }) => {
   if (sortedGear.length === 0) {
@@ -14,8 +13,8 @@ const Gear = ({ sortedGear }) => {
               <div className="gear-item-pos gear-item-style">
                 <img
                   className="gear-item-image"
-                  src={`../images/${gear.name}.jpg`}
-                ></img>
+                  src={`../../../images/${gear.name}.jpg`}
+                />
                 <div className="gear-texts">
                   <div className="gear-item-name-style">{gear.name}</div>
                   <div className="gear-item-descr">
