@@ -86,3 +86,10 @@ select:focus {
   background-color: gray;
   outline: none;
 }
+
+.about-test {
+  margin-top: 10rem;
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+}

@@ -5,11 +5,10 @@ import Filter from "../components/Filter/Filter";
 import Contact from "../components/Contact/Contact";
 import GearTitle from "../components/GearTitle/GearTitle";
 import SortDropdown from "../components/SortDropdown/SortDropdown";
-import About from "./About";
 import "./index.css";
 import { Link } from "gatsby";
 
-const IndexPage = () => {
+const Index = ({ location }) => {
   // STATES
   const [allGear, setAllGear] = useState([]);
   const [filterChoice, setFilterChoice] = useState("All Gear");
@@ -17,7 +16,6 @@ const IndexPage = () => {
 
   // get data from API
   const url = "http://localhost:5000/";
-
   const getAllGear = () => {
     axios
       .get(`${url}gear`)
@@ -30,7 +28,8 @@ const IndexPage = () => {
 
   useEffect(() => {
     getAllGear();
-  }, []);
+    setFilterChoice(location.state.filterChoice);
+  }, [filterChoice]);
 
   return (
     <main className="main">
@@ -58,10 +57,9 @@ const IndexPage = () => {
         sortChoice={sortChoice}
       />
       <Contact />
+      <about setFilterChoice={setFilterChoice} />
     </main>
   );
 };
 
-export default IndexPage;
-
-export const Head = () => <title>Home Page</title>;
+export default Index;
