@@ -1,14 +1,20 @@
 .sort-menu {
   width: 250px;
-  font-family: Quantico;
-  background: #d9d9d9;
   margin: 30px auto;
   margin-right: 20px;
   border: solid;
   border-color: rgba(163, 167, 138, 1);
   color: rgba(163, 167, 138, 1);
-  background-color: white;
   font-size: 0.6em;
-  cursor: pointer;
   display: block;
+  cursor: pointer;
+  font-family: Quantico;
+  background-color: white;
+}
+
+@media only screen and (max-width: 400px) {
+  .sort-menu {
+    width: 79vw;
+    margin-right: 0;
+  }
 }

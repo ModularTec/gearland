@@ -1,4 +1,6 @@
 .filter-menu {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 100%;
   background-color: rgba(163, 167, 138, 0.95);
@@ -8,10 +10,16 @@
   padding: 0px;
   overflow: auto;
   font-size: 2rem;
-  line-height: 10;
+  line-height: 3;
   font-family: Quantico;
   margin-top: -3px;
   color: white;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 20px;
 }
 
 .menu-btn {

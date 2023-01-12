@@ -3,6 +3,7 @@
   justify-content: center;
   max-height: 90vh;
   overflow: auto;
+  margin-top: -30px;
 }
 
 .all-gear {

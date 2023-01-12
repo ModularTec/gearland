@@ -48,6 +48,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
           <div className="filter-box">
             <div className="filter-menu">
               <Link
+                className="menu-link"
                 onClick={(e) => {
                   handleLinkClick(e, "All Gear");
                 }}
@@ -57,6 +58,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
                 All Gear
               </Link>
               <Link
+                className="menu-link"
                 onClick={(e) => {
                   handleLinkClick(e, "Synthesizer");
                 }}
@@ -66,6 +68,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
                 Synthesizers
               </Link>
               <Link
+                className="menu-link"
                 onClick={(e) => {
                   handleLinkClick(e, "Pedal");
                 }}
@@ -75,6 +78,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
                 Pedals
               </Link>
               <Link
+                className="menu-link"
                 onClick={(e) => {
                   handleLinkClick(e, "Drum Machine");
                 }}
@@ -83,7 +87,9 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
               >
                 Drum Machines
               </Link>
-              <Link to="/about">About</Link>
+              <Link className="menu-link" to="/about">
+                About
+              </Link>
             </div>
           </div>
         ) : (
