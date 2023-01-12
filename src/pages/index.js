@@ -5,6 +5,7 @@ import Filter from "../components/Filter/Filter";
 import Contact from "../components/Contact/Contact";
 import GearTitle from "../components/GearTitle/GearTitle";
 import SortDropdown from "../components/SortDropdown/SortDropdown";
+import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
 import "./index.css";
 import { Link } from "gatsby";
 
@@ -28,8 +29,12 @@ const Index = ({ location }) => {
 
   useEffect(() => {
     getAllGear();
-    setFilterChoice(location.state.filterChoice);
-  }, [filterChoice]);
+    // if no state is passed to Index, set to "All Gear"
+    // else set to the passed filterChoice
+    if (location.state === null) {
+      setFilterChoice("All Gear");
+    } else setFilterChoice(location.state.filterChoice);
+  }, []);
 
   return (
     <main className="main">
