@@ -1,6 +1,10 @@
 import React from "react";
 import "./Gear.css";
 
+const underToSpace = (s) => {
+  return s.replaceAll("_", " ");
+};
+
 const Gear = ({ sortedGear }) => {
   if (sortedGear.length === 0) {
     return <div></div>;
@@ -16,7 +20,9 @@ const Gear = ({ sortedGear }) => {
                   src={`../../../images/${gear.name}.jpg`}
                 />
                 <div className="gear-texts">
-                  <div className="gear-item-name-style">{gear.name}</div>
+                  <div className="gear-item-name-style">
+                    {underToSpace(gear.name)}
+                  </div>
                   <div className="gear-item-descr">
                     Description: {gear.description}
                   </div>

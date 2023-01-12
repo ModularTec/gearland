@@ -17,11 +17,9 @@
 .gear-container {
   display: flex;
   flex-direction: column;
-  /* flex-basis: 50%; */
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  /* background-color: pink; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -60,6 +58,5 @@
 .gear-item-name-style {
   font-size: 1.1rem;
   color: black;
-  width: 60%;
   margin-bottom: 0.25rem;
 }

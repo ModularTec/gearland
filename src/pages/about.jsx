@@ -10,10 +10,6 @@ import SortDropdown from "../components/SortDropdown/SortDropdown";
 import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
 import "./about.css";
 
-// We are running into an issue where About does not
-// inherit any state or setState funcs even if it appears to
-// in its props
-
 const About = ({
   filterChoice,
   setFilterChoice,
