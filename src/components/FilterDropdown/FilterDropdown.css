@@ -1,3 +1,7 @@
+.filter-box {
+  z-index: 100011;
+}
+
 .filter-menu {
   display: flex;
   flex-direction: column;
@@ -5,7 +9,7 @@
   width: 100%;
   background-color: rgba(163, 167, 138, 0.95);
   border: none;
-  z-index: 0;
+  z-index: 10;
   margin: 0px;
   padding: 0px;
   overflow: auto;
@@ -14,6 +18,7 @@
   font-family: Quantico;
   margin-top: -3px;
   color: white;
+  z-index: 5;
 }
 
 .menu-link {
@@ -24,7 +29,7 @@
 
 .menu-btn {
   position: relative;
-  margin-left: 3em;
+  margin-left: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,10 +38,11 @@
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   transition: background-color 1.5s ease;
+  z-index: 10;
 }
 
 .menu-btn-burger {
-  width: 50px;
+  width: 35px;
   height: 3px;
   background: #fff;
   border-radius: 10px;
@@ -48,7 +54,7 @@
 .menu-btn-burger::after {
   content: "";
   position: absolute;
-  width: 50px;
+  width: 35px;
   height: 3px;
   background: #fff;
   border-radius: 10px;
@@ -57,11 +63,11 @@
 }
 
 .menu-btn-burger::before {
-  transform: translateY(-16px);
+  transform: translateY(-11px);
 }
 
 .menu-btn-burger::after {
-  transform: translateY(16px);
+  transform: translateY(11px);
 }
 
 /* ANIMATION */
@@ -92,11 +98,4 @@ option:hover {
 select:focus {
   background-color: gray;
   outline: none;
-}
-
-.about-test {
-  margin-top: 10rem;
-  height: 100px;
-  width: 100px;
-  background-color: pink;
 }

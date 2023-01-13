@@ -10,14 +10,16 @@ const Header = ({
   setSortChoice,
 }) => {
   return (
-    <div className="header-pos">
-      <FilterDropdown
-        className="filter-dropdown"
-        filterChoice={filterChoice}
-        setFilterChoice={setFilterChoice}
-      />
-      <div className="title-style">Gearland</div>
-    </div>
+    <header>
+      <div className="header-pos">
+        <FilterDropdown
+          className="filter-dropdown"
+          filterChoice={filterChoice}
+          setFilterChoice={setFilterChoice}
+        />
+        <div className="title-style">Gearland</div>
+      </div>
+    </header>
   );
 };
 
