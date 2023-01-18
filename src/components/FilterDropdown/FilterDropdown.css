@@ -1,5 +1,5 @@
 .filter-box {
-  z-index: 100011;
+  z-index: 1;
 }
 
 .filter-menu {
@@ -83,19 +83,4 @@
 
 .menu-btn-open .menu-btn-burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
-}
-
-select {
-  cursor: pointer;
-  border: 0;
-  outline: none;
-}
-
-option:hover {
-  background-color: rgb(136, 136, 136);
-}
-
-select:focus {
-  background-color: gray;
-  outline: none;
 }

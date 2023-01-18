@@ -1,0 +1,18 @@
+.form-box {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-top: 1rem;
+}
+
+.send-button {
+  margin-top: 1rem;
+}

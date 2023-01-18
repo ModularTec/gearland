@@ -12,6 +12,22 @@
   background-color: white;
 }
 
+/* select {
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-color: red;
+} */
+
+select:focus {
+  background-color: gray;
+  outline: none;
+}
+
+option:hover {
+  background-color: rgb(136, 136, 136);
+}
+
 @media only screen and (max-width: 500px) {
   .sort-menu {
     width: 77vw;

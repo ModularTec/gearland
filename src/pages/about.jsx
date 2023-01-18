@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import { Link } from "gatsby";
-import index from "./index";
 import Header from "../components/Header/Header";
 import Filter from "../components/Filter/Filter";
-import Contact from "../components/Contact/Contact";
-import GearTitle from "../components/GearTitle/GearTitle";
-import SortDropdown from "../components/SortDropdown/SortDropdown";
-import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
+import EmailForm from "../components/EmailForm/EmailForm";
 import "./about.css";
+// import axios from "axios";
+// import index from "./index";
+// import Contact from "../components/Contact/Contact";
+// import GearTitle from "../components/GearTitle/GearTitle";
+// import SortDropdown from "../components/SortDropdown/SortDropdown";
+// import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
 
 const About = ({
   filterChoice,
@@ -17,8 +18,6 @@ const About = ({
   setSortChoice,
   location,
 }) => {
-  console.log(window.location.href);
-
   return (
     <main className="main">
       <div className="nav-area-pos nav-area-style">
@@ -31,14 +30,11 @@ const About = ({
       </div>
       <div className="about-content">
         <h3>About Us!</h3>
+        <div></div>
         <div>
-          <Link to="/">Home</Link>
+          Here's our gear. Any questions or want to buy something? Contact us
+          below: <EmailForm />
         </div>
-        <div>
-          Here's my gear. Any questions or want to buy something? Contact me at
-          gearland@gmail.com.
-        </div>
-        <Contact />
       </div>
     </main>
   );

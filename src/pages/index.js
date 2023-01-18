@@ -5,9 +5,9 @@ import Filter from "../components/Filter/Filter";
 import Contact from "../components/Contact/Contact";
 import GearTitle from "../components/GearTitle/GearTitle";
 import SortDropdown from "../components/SortDropdown/SortDropdown";
-import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
 import "./index.css";
-import { Link } from "gatsby";
+// import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
+// import { Link } from "gatsby";
 
 const Index = ({ location }) => {
   // STATES
