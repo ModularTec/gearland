@@ -4,7 +4,7 @@ const app = express();
 const db = require("../db/queries");
 const dotenv = require(‘dotenv’).config();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT_NUMBER || 4000;
 const cors = require("cors");
 
 app.use(cors({ origin: true }));
