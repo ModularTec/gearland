@@ -8,8 +8,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "develop": "npm nodemon dotenv_config_path=.env",
+    "start": "npx nodemon dotenv_config_path=.env",
     "build": "gatsby build",
     "serve": "nodemon server/index.js",
     "clean": "gatsby clean"
