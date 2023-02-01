@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "nodemon server/index.js",
+    "start": "npm run develop",
     "build": "gatsby build",
     "serve": "nodemon server/index.js",
     "clean": "gatsby clean"
