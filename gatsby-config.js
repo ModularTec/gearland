@@ -3,13 +3,13 @@ module.exports = {
     title: `gear_land`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production"),
-    }),
-  ],
-};
+  plugins: [],
 
+
+new webpack.DefinePlugin({
+  'process.env.NODE_ENV' : JSON.stringify('production')
+})
+};
 // require("dotenv").config({
 //   path: `.env.${process.env.NODE_ENV}`,
 // });
