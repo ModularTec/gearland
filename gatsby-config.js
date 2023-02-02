@@ -3,7 +3,14 @@ module.exports = {
     title: `gear_land`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        // This has effect on the react lib size
+        NODE_ENV: JSON.stringify("production"),
+      },
+    }),
+  ],
 };
 
 // require("dotenv").config({
