@@ -6,9 +6,9 @@ module.exports = {
   plugins: [],
 };
 
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// });
 
 // https://github.com/gatsbyjs/gatsby/issues/28495
 

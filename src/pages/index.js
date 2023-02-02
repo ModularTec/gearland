@@ -6,8 +6,6 @@ import Contact from "../components/Contact/Contact";
 import GearTitle from "../components/GearTitle/GearTitle";
 import SortDropdown from "../components/SortDropdown/SortDropdown";
 import "./index.css";
-// import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
-// import { Link } from "gatsby";
 
 const Index = ({ location }) => {
   // STATES
@@ -16,7 +14,7 @@ const Index = ({ location }) => {
   const [sortChoice, setSortChoice] = useState("date_added V");
 
   // get data from API
-  const url = "http://localhost:5000/";
+  const url = "http://localhost:4000/";
   const getAllGear = () => {
     axios
       .get(`${url}gear`)
