@@ -5,10 +5,9 @@ module.exports = {
   },
   plugins: [],
 
-
-new webpack.DefinePlugin({
-  'process.env.NODE_ENV' : JSON.stringify('production')
-})
+  // new webpack.DefinePlugin({
+  //   'process.env.NODE_ENV' : JSON.stringify('production')
+  // })
 };
 // require("dotenv").config({
 //   path: `.env.${process.env.NODE_ENV}`,
