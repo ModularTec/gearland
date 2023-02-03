@@ -25,6 +25,4 @@ app.put("/gear/:id", db.updateGear);
 
 app.delete("/gear/:id", db.deleteGear);
 
-app.listen(`0.0.0.0:${PORT}`, () =>
-  console.log(`Server running on port ${PORT}`)
-);
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
