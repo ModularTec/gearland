@@ -7,7 +7,7 @@ const pool = new Pool({
   // database: "gearland"
   user: process.env.PGUSER,
   host: process.env.PGHOST,
-  database: process.env.PGDATABSE,
+  database: process.env.PGDATABASE,
   password: process.env.PGPASSWORD,
   port: process.env.PGPORT,
 });
