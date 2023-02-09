@@ -1,11 +1,15 @@
 const Pool = require("pg").Pool;
 const pool = new Pool({
-  user: "ericfernandez",
+  // user: ericfernandez
   // host: "localhost",
-  host: `0.0.0.0`,
-  database: "gearland",
-  password: "",
-  port: 5432,
+  // port: 5432
+  // password: ""
+  // database: "gearland"
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABSE,
+  password: process.env.PGPASSWORD
+  port: process.env.PGPORT,
 });
 
 // GET all gear
