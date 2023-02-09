@@ -9,7 +9,7 @@ const pool = new Pool({
   host: process.env.PGHOST,
   database: process.env.PGDATABSE,
   password: process.env.PGPASSWORD,
-  port: process.env.PORT,
+  port: process.env.PGPORT,
 });
 
 // GET all gear
