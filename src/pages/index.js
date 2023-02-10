@@ -14,7 +14,7 @@ const Index = ({ location }) => {
   const [sortChoice, setSortChoice] = useState("date_added V");
 
   // get data from API
-  const url = 0.0.0.0;
+  const url = "/";
   const getAllGear = () => {
     axios
       .get(`${url}gear`)
