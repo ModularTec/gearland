@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "gatsby serve --port 80 --host 0.0.0.0",
+    "start": "npm install && gatsby serve",
     "build": "gatsby build",
     "serve": "node server/index.js",
     "clean": "gatsby clean"
