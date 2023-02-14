@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const db = require("../db/queries");
 // const dotenv = require(‘dotenv’).config();
-const PORT_NUM = `0.0.0.0:${process.env.PORT}`;
+const PORT_NUM = process.env.PORT;
 //const PORT = 4000;
 const cors = require("cors");
 
