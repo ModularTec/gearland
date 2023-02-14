@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const db = require("../db/queries");
 // const dotenv = require(‘dotenv’).config();
-const PORT = process.env.PORT || 4000;
+const PORT_NUM = `0.0.0.0:PORT`;
 //const PORT = 4000;
 const cors = require("cors");
 
@@ -25,4 +25,4 @@ app.put("/gear/:id", db.updateGear);
 
 app.delete("/gear/:id", db.deleteGear);
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT_NUM, () => console.log(`Server running on port ${PORT_NUM}`));
