@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use("/", express.static(path.join(__dirname, "public")));
 // response.json({ info: "this is the get for /" });
 
+// changed
+
 app.get("/", (request, response) => {
   response.sendFile(path.resolve(__dirname, "public", "index.html"));
   // response.json({ info: "this is the get for /" });
