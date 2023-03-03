@@ -1,11 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const app = express();
+const app = express.static();
 const db = require("../db/queries");
 // const dotenv = require(‘dotenv’).config();
 const PORT_NUM = process.env.PORT || 5000;
 //const PORT = 4000;
 const cors = require("cors");
+//app.use(express.static("public"));
 
 app.use(cors({ origin: true }));
 app.use(bodyParser.json());
