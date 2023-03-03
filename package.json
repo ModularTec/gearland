@@ -11,7 +11,7 @@
     "develop": "gatsby develop",
     "start": "npm install && npm run serve",
     "build": "gatsby build",
-    "serve": "node server/index.js && gatsby serve",
+    "serve": "node server/index.js",
     "clean": "gatsby clean"
   },
   "dependencies": {
