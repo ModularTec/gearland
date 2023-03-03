@@ -18,7 +18,7 @@ const path = require("path");
 // changed
 
 app.get("/", (request, response) => {
-  response.sendFile(path.resolve(__dirname, "public", "index.html"));
+  response.sendFile(path.resolve("public", "index.html"));
   // response.json({ info: "this is the get for /" });
 });
 
