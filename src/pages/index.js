@@ -37,6 +37,8 @@ const Index = ({ location }) => {
     } else setFilterChoice(location.state.filterChoice);
   }, []);
 
+  console.log("This is a console.log that should run");
+
   return (
     <main className="main">
       <div className="nav-area-pos nav-area-style">
