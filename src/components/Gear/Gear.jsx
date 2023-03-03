@@ -17,7 +17,7 @@ const Gear = ({ sortedGear }) => {
               <div className="gear-item-pos gear-item-style">
                 <img
                   className="gear-item-image"
-                  src={`../../../static/${gear.name}.jpg`}
+                  src={`../../../${gear.name}.jpg`}
                 />
                 <div className="gear-texts">
                   <div className="gear-item-name-style">

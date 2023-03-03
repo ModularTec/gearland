@@ -27,6 +27,7 @@ app.put("/gear/:id", db.updateGear);
 app.delete("/gear/:id", db.deleteGear);
 
 app.listen(PORT_NUM, () => console.log(`Server running on port ${PORT_NUM}`));
+
 // app.use
 app.use(cors({ origin: true }));
 app.use(bodyParser.json());
