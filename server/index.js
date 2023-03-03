@@ -13,14 +13,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const path = require("path");
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../public")));
 // app.use("/", express.static(path.join(__dirname, "public")));
 // response.json({ info: "this is the get for /" });
 
 // changed
 
 app.get("/", (request, response) => {
-  response.sendFile(path.resolve("public", "index.html"));
+  response.sendFile(path.resolve("../public", "index.html"));
   // response.json({ info: "this is the get for /" });
 });
 
