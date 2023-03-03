@@ -5,6 +5,10 @@ const underToSpace = (s) => {
   return s.replaceAll("_", " ");
 };
 
+const spaceToUnder = (s) => {
+  return s.replaceAll(" ", "_");
+};
+
 const Gear = ({ sortedGear }) => {
   if (sortedGear.length === 0) {
     return <div></div>;
@@ -17,7 +21,7 @@ const Gear = ({ sortedGear }) => {
               <div className="gear-item-pos gear-item-style">
                 <img
                   className="gear-item-image"
-                  src={`../../../static/${gear.name}.jpg`}
+                  src={`../../../static/${spaceToUnder(gear.name)}.jpg`}
                 />
                 <div className="gear-texts">
                   <div className="gear-item-name-style">
