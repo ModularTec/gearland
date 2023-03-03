@@ -7,13 +7,13 @@ const PORT_NUM = process.env.PORT || 5000;
 //const PORT = 4000;
 const cors = require("cors");
 //app.use(express.static("public"));
-app.use(express.static(path.join(__dirname, "./public")));
 
 app.use(cors({ origin: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const path = require("path");
+app.use(express.static(path.join(__dirname, "./public")));
 // app.use("/", express.static(path.join(__dirname, "public")));
 // response.json({ info: "this is the get for /" });
 
