@@ -5,6 +5,11 @@ const underToSpace = (s) => {
   return s.replaceAll("_", " ");
 };
 
+//                 <img
+// className="gear-item-image"
+// src={`../../../${gear.name}.jpg`}
+// />
+
 const Gear = ({ sortedGear }) => {
   if (sortedGear.length === 0) {
     return <div></div>;
@@ -15,10 +20,7 @@ const Gear = ({ sortedGear }) => {
           {sortedGear.map((gear) => (
             <div className="gear-container">
               <div className="gear-item-pos gear-item-style">
-                <img
-                  className="gear-item-image"
-                  src={`../../../${gear.name}.jpg`}
-                />
+                <img className="gear-item-image" src={`/${gear.name}.jpg`} />
                 <div className="gear-texts">
                   <div className="gear-item-name-style">
                     {underToSpace(gear.name)}
