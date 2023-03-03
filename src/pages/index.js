@@ -16,6 +16,7 @@ const Index = ({ location }) => {
   // get data from API
   const url = "/gear";
   const getAllGear = () => {
+    console.log("getAllGear was called");
     axios
       .get(`${url}`)
       .then((res) => {
@@ -27,6 +28,7 @@ const Index = ({ location }) => {
   };
 
   useEffect(() => {
+    console.log("useEffect was called");
     getAllGear();
     // if no state is passed to Index, set to "All Gear"
     // else set to the passed filterChoice
