@@ -14,12 +14,13 @@ const Index = ({ location }) => {
   const [sortChoice, setSortChoice] = useState("date_added V");
 
   // get data from API
-  const url = "https://gearland-production.up.railway.app/gear";
+  const url = "/gear";
   const getAllGear = () => {
     axios
       .get(`${url}`)
       .then((res) => {
         let allGear = res.data;
+        console.log(`allGear: ${allGear}`);
         setAllGear(allGear);
       })
       .catch((error) => console.error(`Error: ${error}`));
