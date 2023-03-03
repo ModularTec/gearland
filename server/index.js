@@ -26,6 +26,8 @@ app.put("/gear/:id", db.updateGear);
 
 app.delete("/gear/:id", db.deleteGear);
 
+app.listen(PORT_NUM, () => console.log(`Server running on port ${PORT_NUM}`));
+
 // app.use
 app.use(cors({ origin: true }));
 app.use(bodyParser.json());
@@ -33,5 +35,3 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 // app.use("/", express.static(path.join(__dirname, "public")));
 // response.json({ info: "this is the get for /" });
-
-app.listen(PORT_NUM, () => console.log(`Server running on port ${PORT_NUM}`));
