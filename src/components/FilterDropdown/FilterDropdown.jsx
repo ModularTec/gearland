@@ -88,7 +88,7 @@ function FilterDropdown({ filterChoice, setFilterChoice }) {
                 Drum Machines
               </Link>
               <Link className="menu-link" to="/about">
-                About
+                About / To Purchase
               </Link>
             </div>
           </div>

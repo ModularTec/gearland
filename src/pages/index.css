@@ -6,6 +6,7 @@ body {
   padding: 0px;
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .main {
@@ -13,8 +14,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-
-.nav-area-pos {
+4 .nav-area-pos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -59,8 +59,8 @@ body {
     justify-content: start;
   }
   .gear-and-sort-box {
-    width: 85%;
-    margin-left: 20px;
+    width: 78%;
+    margin-left: 6vw;
     justify-self: center;
     align-items: center;
   }
