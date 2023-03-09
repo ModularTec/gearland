@@ -1,8 +1,9 @@
 .all-gear-container {
   display: flex;
   justify-content: center;
-  max-height: 90vh;
-  overflow: auto;
+  max-height: 78vh;
+  /* background-color: rgba(1, 200, 200, 0.1); */
+  overflow: scroll;
   margin-top: -30px;
 }
 

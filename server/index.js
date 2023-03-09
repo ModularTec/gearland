@@ -6,14 +6,22 @@ const db = require("../db/queries");
 const PORT_NUM = process.env.PORT || 5000;
 //const PORT = 4000;
 const cors = require("cors");
-//app.use(express.static("public"));
+app.use(express.static("public"));
 
+app.use(cors({ origin: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("./public"));
 const path = require("path");
 
 // GET routes
+// app.get("/", (request, response) => {
+//   response.sendFile(path.resolve("public", "index.html"));
+//   // response.json({ info: "this is the get for /" });
+// });
+
 app.get("/", (request, response) => {
-  response.sendFile(path.resolve("public", "index.html"));
-  // response.json({ info: "this is the get for /" });
+  response.json({ info: "this is the get for /" });
 });
 
 app.get("/gear", db.getAllGear);
@@ -29,9 +37,6 @@ app.delete("/gear/:id", db.deleteGear);
 app.listen(PORT_NUM, () => console.log(`Server running on port ${PORT_NUM}`));
 
 // app.use
-app.use(cors({ origin: true }));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("./public"));
+
 // app.use("/", express.static(path.join(__dirname, "public")));
 // response.json({ info: "this is the get for /" });

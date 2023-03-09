@@ -4,12 +4,6 @@ import Header from "../components/Header/Header";
 import Filter from "../components/Filter/Filter";
 import EmailForm from "../components/EmailForm/EmailForm";
 import "./about.css";
-// import axios from "axios";
-// import index from "./index";
-// import Contact from "../components/Contact/Contact";
-// import GearTitle from "../components/GearTitle/GearTitle";
-// import SortDropdown from "../components/SortDropdown/SortDropdown";
-// import FilterDropdown from "../components/FilterDropdown/FilterDropdown";
 
 const About = ({
   filterChoice,

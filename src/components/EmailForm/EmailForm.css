@@ -14,5 +14,11 @@
 }
 
 .send-button {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  height: 30px;
+  background-color: rgba(163, 167, 138, 1);
+  color: white;
+  border: none;
+  font-family: Quantico, sans-serif;
+  border-radius: 3px;
 }

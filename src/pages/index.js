@@ -14,14 +14,12 @@ const Index = ({ location }) => {
   const [sortChoice, setSortChoice] = useState("date_added V");
 
   // get data from API
-  const url = "/gear";
+  const url = "http://localhost:5000/";
   const getAllGear = () => {
-    console.log("getAllGear was called");
     axios
-      .get(`${url}`)
+      .get(`${url}gear`)
       .then((res) => {
         let allGear = res.data;
-        console.log(`allGear: ${allGear}`);
         setAllGear(allGear);
       })
       .catch((error) => console.error(`Error: ${error}`));
@@ -64,7 +62,6 @@ const Index = ({ location }) => {
         filterChoice={filterChoice}
         sortChoice={sortChoice}
       />
-      <Contact />
       <about setFilterChoice={setFilterChoice} />
     </main>
   );
