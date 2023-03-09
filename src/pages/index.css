@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-4 .nav-area-pos {
+.nav-area-pos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

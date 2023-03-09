@@ -64,7 +64,6 @@ const Index = ({ location }) => {
         filterChoice={filterChoice}
         sortChoice={sortChoice}
       />
-      <Contact />
       <about setFilterChoice={setFilterChoice} />
     </main>
   );
