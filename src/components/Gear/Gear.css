@@ -1,9 +1,16 @@
 .all-gear-container {
   display: flex;
   justify-content: center;
-  max-height: 78vh;
+  max-height: 100vh;
   overflow: scroll;
   margin-top: -30px;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+  .all-gear-container {
+    max-height: 78vh;
+  }
 }
 
 .all-gear {
